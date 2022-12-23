@@ -29,4 +29,6 @@ public class NameController {
     public ResponseEntity<Map<String, String >> updateName(@PathVariable("id")int id, @RequestBody UpdateForm from) {
         return ResponseEntity.ok(Map.of("message", "name successfully updated"));
     }
+
+
 }
