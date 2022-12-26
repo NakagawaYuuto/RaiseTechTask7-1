@@ -34,4 +34,13 @@ public class NameController {
     public ResponseEntity<Map<String, String >> deleteName(@PathVariable("id")int id){
         return ResponseEntity.ok(Map.of("message", "delete"));
     }
+
+    @GetMapping("/testquerynames")
+    @ResponseBody
+    public  String testquerynames(@RequestParam String name, @RequestParam int age ) {
+        String profile = "Self-introduction" + "<br>";
+        profile = profile.concat("My name is " + name + "<br>");
+        profile = profile.concat("I am  " + age + "years old" + "<br>");
+        return profile;
+    }
 }
