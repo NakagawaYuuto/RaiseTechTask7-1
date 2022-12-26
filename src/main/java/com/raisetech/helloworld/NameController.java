@@ -30,5 +30,8 @@ public class NameController {
         return ResponseEntity.ok(Map.of("message", "name successfully updated"));
     }
 
-
+    @DeleteMapping("/names/{id}")
+    public ResponseEntity<Map<String, String >> deleteName(@PathVariable("id")int id){
+        return ResponseEntity.ok(Map.of("message", "delete"));
+    }
 }
