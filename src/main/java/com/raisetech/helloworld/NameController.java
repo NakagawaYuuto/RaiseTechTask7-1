@@ -30,5 +30,12 @@ public class NameController {
         return ResponseEntity.ok(Map.of("message", "name successfully updated"));
     }
 
-
+    @GetMapping("/testquerynames")
+    @ResponseBody
+    public  String testquerynames(@RequestParam String name, @RequestParam int age ) {
+        String profile = "Self-introduction" + "<br>";
+        profile = profile.concat("My name is " + name + "<br>");
+        profile = profile.concat("I am  " + age + "years old" + "<br>");
+        return profile;
+    }
 }
